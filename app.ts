@@ -1,37 +1,36 @@
-// console.log("It works!");
 
-
-class MySimpleTest
+namespace MySimpleTSDemo
 {
-    private OutPutElem: any;
-
-    constructor(MyOutPutElem: any) 
+    class HtmlWrite
     {
-        this.OutPutElem = MyOutPutElem;
-        this.OutPutElem.innerText = "";
+        private OutPutElem: any;
+
+        constructor(MyOutPutElem: any = document.getElementById("OutPutElem") ) 
+        {
+            this.OutPutElem = MyOutPutElem;
+            this.OutPutElem.innerText = "";
+        }
+
+        public  LogOutput(msg: string): void 
+        {
+            this.OutPutElem.innerText += msg;
+        }
     }
 
-    public  LogOutput(msg: string): void 
+    export class Startup 
     {
-        this.OutPutElem.innerText += msg;
+        public static main(): number
+        {
+            console.log("Hello World");
+
+            // var demo1 : HtmlWrite = new HtmlWrite( document.getElementById("OutPutElem") );
+            var demo1 : HtmlWrite = new HtmlWrite();
+
+            demo1.LogOutput("TypeScript Hello World");
+            demo1.LogOutput(" is Fun :-)");
+
+            return 0;
+        }
     }
 }
-
-class Startup 
-{
-    public static main(): number
-    {
-        console.log("Hello World");
-
-        var demo1 : MySimpleTest = new 
-        MySimpleTest( document.getElementById("OutPutElem") );
-
-        demo1.LogOutput("This is a");
-        demo1.LogOutput(" TypeScript Hello World! :-)");
-
-        return 0;
-    }
-}
-
-
 
