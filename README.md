@@ -7,10 +7,13 @@ npm install
 ``` 
 
 Run "tsc" to compile the TypeScript code  
-From VS Code: <ctrl>+Shift+B 
-tsc -w to run on watch mode
+From VS Code: <ctrl>+Shift+B  
+or to run on watch mode  
+tsc -w 
 ```bash
 tsc  
+or  
+tsc -w
 ```
 
 npm start  (to run the development server (lite-server))
