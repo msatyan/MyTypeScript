@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Sample TypeScript</title>
-    <script src="app.js"></script>
+    <script src="node_modules/systemjs/dist/system.js"></script>
 </head>
 
 <body>
@@ -21,10 +21,26 @@
 </div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  MySimpleTSDemo.Startup.main();
-});
+  // set our baseURL reference path
+  SystemJS.config({
+    baseURL: '/',
+    defaultJSExtensions: true
+  });
+  SystemJS.import('app.js')
+  .then(function() {
+      console.log("Testing-1");
+    });
 
+
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", 
+    function() {
+        console.log("Hellow From DOMContentLoaded");
+        // MyStartup.main();
+    });
 </script>
 
 </body>

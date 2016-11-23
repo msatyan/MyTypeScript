@@ -1,6 +1,3 @@
-
-namespace MySimpleTSDemo
-{
     class HtmlWrite
     {
         private OutPutElem: any;
@@ -17,7 +14,7 @@ namespace MySimpleTSDemo
         }
     }
 
-    export class Startup 
+    export default class MyStartup
     {
         public static main(): number
         {
@@ -32,5 +29,6 @@ namespace MySimpleTSDemo
             return 0;
         }
     }
-}
+    MyStartup.main();
+    
 
