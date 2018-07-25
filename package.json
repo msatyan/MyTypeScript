@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "systemjs": "^0.19.41"
+    "systemjs": "^0.19.41",
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
     "jspm": "^0.16.47",

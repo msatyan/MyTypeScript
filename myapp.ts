@@ -23,8 +23,8 @@
             // var demo1 : HtmlWrite = new HtmlWrite( document.getElementById("OutPutElem") );
             var demo1 : HtmlWrite = new HtmlWrite();
 
-            demo1.LogOutput("TypeScript Hello World");
-            demo1.LogOutput(" is Fun :-)");
+            demo1.LogOutput("My1 TypeScript Hello World");
+            demo1.LogOutput(" is Fun :-)!");
 
             return 0;
         }

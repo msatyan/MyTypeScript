@@ -8,6 +8,7 @@
 
     <title>Sample TypeScript</title>
     <script src="node_modules/systemjs/dist/system.js"></script>
+    <script src="./myapp2.js"></script>
 </head>
 
 <body>
@@ -19,6 +20,10 @@
     <p>Please check the console output too</p>
     <p id="OutPutElem"></p>
 </div>
+<div>
+    <button onclick="MyAdd1()">Click me</button>
+</div>
+
 
 <script>
   // set our baseURL reference path
@@ -26,7 +31,7 @@
     baseURL: '/',
     defaultJSExtensions: true
   });
-  SystemJS.import('app.js')
+  SystemJS.import('myapp.js')
   .then(function() {
       console.log("Testing-1");
     });
